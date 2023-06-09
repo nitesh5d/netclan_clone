@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/edit_profile"
+            android:icon="@drawable/person_filled"
+            android:title="Edit Profile"
+            />
+
+        <item android:id="@+id/my_network"
+            android:icon="@drawable/groups_filled"
+            android:title="My Network"/>
+
+        <item android:id="@+id/switch_business"
+            android:icon="@drawable/outline_business_center_24"
+            android:title="Switch To Business"/>
+
+        <item android:id="@+id/switch_merchant"
+            android:icon="@drawable/baseline_storefront_24"
+            android:title="Switch To Merchant"/>
+
+        <item android:id="@+id/dating"
+            android:icon="@drawable/heart_outlined"
+            android:title="Dating"/>
+
+        <item android:id="@+id/matrimony"
+            android:icon="@drawable/ring"
+            android:title="Matrimony"/>
+
+        <item android:id="@+id/buy_sell_rent"
+            android:icon="@drawable/baseline_shopping_bag_24"
+            android:title="Buy Sell Rent"/>
+
+        <item android:id="@+id/jobs"
+            android:icon="@drawable/baseline_work_24"
+            android:title="Jobs"/>
+
+        <item android:id="@+id/business_card"
+            android:icon="@drawable/business_card"
+            android:title="Business Card"/>
+
+        <item android:id="@+id/nc_groups"
+            android:icon="@drawable/round_tag_24"
+            android:title="Natclan Groups"/>
+
+        <item android:id="@+id/notes"
+            android:icon="@drawable/baseline_edit_note_24"
+            android:title="Notes"/>
+
+        <item android:id="@+id/location"
+            android:icon="@drawable/baseline_location_on_24"
+            android:title="Live Location"/>
+    </group>
+
+</menu>
