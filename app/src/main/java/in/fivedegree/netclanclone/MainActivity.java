@@ -4,15 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.snackbar.Snackbar;
@@ -20,6 +23,11 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import in.fivedegree.netclanclone.Fragments.ChatFragment;
+import in.fivedegree.netclanclone.Fragments.ContactFragment;
+import in.fivedegree.netclanclone.Fragments.ExploreFragment;
+import in.fivedegree.netclanclone.Fragments.GroupsFragment;
+import in.fivedegree.netclanclone.Fragments.NetworkFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
     LinearProgressIndicator profileCompletion;
     NavigationView navigationView;
     DrawerLayout drawerLayout;
-    TabLayout tabLayout;
-    TabItem tabPersonal,tabBusiness, tabMerchant;
-    ViewPager viewPager;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        openFragment(new ExploreFragment());
 
 //        ==============================
 //        ACTIONBAR START
@@ -162,6 +170,47 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+//        ==============================
+//        BOTTOM NAVIGATION VIEW START
+//        ==============================
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setItemIconTintList(null);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.explore_nav_item:
+                    item.setIcon(R.drawable.nav_explore_selector);
+                    openFragment(new ExploreFragment());
+                    break;
+                case R.id.network_nav_item:
+                    item.setIcon(R.drawable.nav_network_selector);
+                    openFragment(new NetworkFragment());
+                    break;
+                case R.id.chat_nav_item:
+                    item.setIcon(R.drawable.nav_chat_selector);
+                    openFragment(new ChatFragment());
+                    break;
+                case R.id.contacts_nav_item:
+                    item.setIcon(R.drawable.nav_contact_selector);
+                    openFragment(new ContactFragment());
+                    break;
+                case R.id.groups_nav_item:
+                    item.setIcon(R.drawable.nav_groups_selector);
+                    openFragment(new GroupsFragment());
+                    break;
+            }
+            return true;
+        });
+        bottomNavigationView.setSelectedItemId(R.id.explore_nav_item);
+
+//        ==============================
+//        BOTTOM NAVIGATION VIEW END
+//        ==============================
+    }
+
+    private void openFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
+
     }
 
     private void makeSnackbar(String msg) {
@@ -181,6 +230,5 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-
 
 }

@@ -40,7 +40,7 @@
             android:title="Business Card"/>
 
         <item android:id="@+id/nc_groups"
-            android:icon="@drawable/round_tag_24"
+            android:icon="@drawable/groups_active"
             android:title="Natclan Groups"/>
 
         <item android:id="@+id/notes"
