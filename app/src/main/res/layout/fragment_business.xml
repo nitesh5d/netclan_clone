@@ -3,15 +3,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.BusinessFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Business"
-        android:fontFamily="@font/open_sans_bold"
-        android:textSize="26sp"
-        android:textAllCaps="true"
-        android:layout_gravity="center"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="7dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/search_bg">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/search_icon"
+                app:tint="@color/blue_003"
+                android:layout_marginStart="15dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:hint="Search"
+                android:background="#FFFFFF"
+                android:textColorHint="@color/blue_003"
+                android:textColor="@color/blue_003"
+                android:padding="2dp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/filter_icon"
+            android:rotation="90"
+            android:layout_marginStart="20dp"
+            app:tint="@color/blue_001" />
+    </LinearLayout>
 
 </FrameLayout>
