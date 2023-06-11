@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white_001"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        android:layout_marginStart="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp">
+
+            <LinearLayout
+                android:id="@+id/invite_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:background="@drawable/ripple_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/round_add_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_001"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="INVITE"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/invite_btn">
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_001"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="16sp"
+                    android:text="Name Name"/>
+
+                <TextView
+                    android:id="@+id/city_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_002"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp"
+                    android:text="Mumbai | Fresher"/>
+
+                <TextView
+                    android:id="@+id/range_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_001"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp"
+                    android:text="Within 100-200 m"/>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/layout_progress"
+                    android:layout_width="100dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="5dp"
+                    app:trackColor="#C8C8C8"
+                    app:indicatorColor="@color/blue_001"
+                    app:trackCornerRadius="100dp"
+                    app:trackThickness="12dp"
+                    android:progress="70"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_1">
+
+                <TextView
+                    android:id="@+id/purpose_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="14sp"
+                    android:text="@string/coffee_business_friendship"
+                    android:textColor="@color/blue_001" />
+
+                <TextView
+                    android:id="@+id/bio_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/hi_community"
+                    android:textColor="@color/blue_002"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/bio2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text=""
+                    android:textColor="@color/blue_001"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/IvcardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white_001"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="7dp"
+        app:cardMaxElevation="7dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/dp_Iv"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:src="@drawable/dp_placeholder" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

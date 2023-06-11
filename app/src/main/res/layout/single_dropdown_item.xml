@@ -1,0 +1,10 @@
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Available"
+    android:textSize="16sp"
+    android:padding="16dp"
+    android:background="@drawable/ripple_grey"
+    android:textColor="@color/black"
+    android:fontFamily="@font/roboto"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="start"
         android:orientation="vertical"
         android:fitsSystemWindows="true">
@@ -58,6 +58,7 @@
         android:layout_height="match_parent"
         app:menu="@menu/nav_drawer_menu"
         app:headerLayout="@layout/nav_drawer_header"
+        android:background="@color/white_001"
         android:layout_gravity="start"
         app:itemIconTint="@color/blue_001"
         app:itemTextColor="@color/blue_001"/>

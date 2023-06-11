@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "278436612518",
+    "project_id": "netclan-clone",
+    "storage_bucket": "netclan-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278436612518:android:c41964ebedb526e2342767",
+        "android_client_info": {
+          "package_name": "in.fivedegree.netclanclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278436612518-7afhtbcopagb97qklt6pid988nmj3umi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkm8pKti9jnFBkoYyDkjtMpSHnVVEssKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278436612518-7afhtbcopagb97qklt6pid988nmj3umi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

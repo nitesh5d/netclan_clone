@@ -10,6 +10,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -46,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        openFragment(new ExploreFragment());
 
 //        ==============================
 //        ACTIONBAR START
@@ -57,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         View customToolbarView = getLayoutInflater().inflate(R.layout.main_action_bar, toolbar, false);
         toolbar.addView(customToolbarView);
+
+        openFragment(new ExploreFragment());
 
         refineBtn = customToolbarView.findViewById(R.id.refine_btn);
         welcomeTv = customToolbarView.findViewById(R.id.welcome_tv);
@@ -206,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
 //        ==============================
 //        BOTTOM NAVIGATION VIEW END
 //        ==============================
+
     }
 
     private void openFragment(Fragment fragment){

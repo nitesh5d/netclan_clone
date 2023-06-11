@@ -48,7 +48,7 @@ public class ExploreFragment extends Fragment {
 
             }
         });
-//
+
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {

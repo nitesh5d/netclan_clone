@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_001"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.PersonalFragment">
 
@@ -45,19 +46,35 @@
                     app:tint="@color/blue_003" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:id="@+id/search_Inp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:background="#FFFFFF"
+                    android:layout_weight="1"
                     android:hint="Search"
                     android:padding="2dp"
                     android:textColor="@color/blue_003"
                     android:textColorHint="@color/blue_003"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:layout_marginEnd="20dp"/>
+
+                <ImageView
+                    android:id="@+id/clear_search"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/round_close_24"
+                    android:layout_marginEnd="15dp"
+                    android:visibility="invisible"
+                    app:tint="@color/blue_003" />
 
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/filter"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="20dp"
@@ -75,7 +92,55 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_section" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B9FFFFFF"
+            android:visibility="gone">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:fabSize="normal"
+                android:src="@drawable/round_add_24"
+                android:contentDescription="@string/show_menu"
+                app:tint="@color/white_001"
+                app:backgroundTint="@color/blue_001"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_dating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/show_menu"
+                android:src="@drawable/baseline_edit_note_24"
+                app:backgroundTint="#FFC107"
+                app:fabSize="mini"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/fab"
+                app:layout_constraintEnd_toEndOf="@+id/fab"
+                app:layout_constraintStart_toStartOf="@+id/fab" />
+
+            <TextView
+                android:id="@+id/welcome_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Dating"
+                android:textColor="@color/blue_001"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/fab_dating"
+                app:layout_constraintEnd_toStartOf="@+id/fab_dating"
+                app:layout_constraintTop_toTopOf="@+id/fab_dating" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

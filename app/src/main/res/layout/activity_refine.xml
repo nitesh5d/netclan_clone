@@ -1,9 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RefineActivity">
+    tools:context=".RefineActivity"
+    android:background="@color/white_001">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_001" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:layout_below="@id/toolbar">
+
+
+    <TextView
+        android:id="@+id/dropdownTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/select_availability"
+        android:textColor="@color/blue_001"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropdown"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dropdown_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdownTv">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:fontFamily="@font/roboto"
+            android:inputType="none"
+            android:textColor="@color/blue_001"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/statusTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/select_availability"
+        android:textColor="@color/blue_001"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown" />
+
+    <EditText
+        android:id="@+id/statusInp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/hi_community"
+        android:textColor="@color/blue_001"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingBottom="20dp"
+        android:maxLength="250"
+        android:maxHeight="80dp"
+        android:gravity="top"
+        android:background="@drawable/dropdown_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusTv" />
+
+    <TextView
+        android:id="@+id/charIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="0/250"
+        android:textColor="@color/blue_001"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/statusInp"
+        app:layout_constraintTop_toBottomOf="@+id/statusInp" />
+
+    <TextView
+        android:id="@+id/distanceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Select Hyper Local Distance"
+        android:textColor="@color/blue_001"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charIndicator" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:min="1"
+        android:progress="50"
+        android:layout_marginTop="30dp"
+        android:splitTrack="false"
+        android:thumbTint="@color/blue_001"
+        android:progressTint="@color/blue_001"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distanceTv" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="1 Km"
+            android:textColor="@color/blue_001"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/seekBar"
+            app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="100 Km"
+            android:textColor="@color/blue_001"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/seekBar"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"/>
+
+        <TextView
+            android:id="@+id/purposeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Select Hyper Local Distance"
+            android:textColor="@color/blue_001"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
