@@ -1,4 +1,4 @@
-package in.fivedegree.netclanclone;
+package in.fivedegree.netclanclone.Fragments;
 
 
 import androidx.annotation.NonNull;
