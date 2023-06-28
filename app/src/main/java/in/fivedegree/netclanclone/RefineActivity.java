@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,9 +39,9 @@ public class RefineActivity extends AppCompatActivity {
     EditText statusInp;
     TextView charIndicator;
     ChipGroup chipGroup;
-    Button saveBtn;
+    LinearLayout saveBtn;
     ArrayList<String> selectedPurpose = new ArrayList<String>() ;
-    int distanceValue;
+    int distanceValue = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +113,7 @@ public class RefineActivity extends AppCompatActivity {
             Chip chip = new Chip(this);
             chip.setText(purposeItems[i]);
 
-            chip.setChipBackgroundColor(ColorStateList.valueOf(getResources().getColor(R.color.transparent)));
+            chip.setChipBackgroundColor(ColorStateList.valueOf(getResources().getColor(R.color.white_001)));
             chip.setChipStrokeColor(ColorStateList.valueOf(getResources().getColor(R.color.blue_001)));
             chip.setChipStrokeWidth(getResources().getDimension(R.dimen.chip_stroke_width));
             chip.setTextColor(getResources().getColor(R.color.blue_001));
@@ -131,7 +132,7 @@ public class RefineActivity extends AppCompatActivity {
                         chip.setCheckedIcon(null);
                     }
                     else {
-                        chip.setChipBackgroundColor(ColorStateList.valueOf(getResources().getColor(R.color.transparent)));
+                        chip.setChipBackgroundColor(ColorStateList.valueOf(getResources().getColor(R.color.white_001)));
                         chip.setChipStrokeColor(ColorStateList.valueOf(getResources().getColor(R.color.blue_001)));
                         chip.setChipStrokeWidth(getResources().getDimension(R.dimen.chip_stroke_width));
                         chip.setTextColor(getResources().getColor(R.color.blue_001));
